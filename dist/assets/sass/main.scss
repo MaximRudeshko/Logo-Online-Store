@@ -5,28 +5,40 @@
     border:0;
     font-family:"Trebuchet";
     user-select: none;
+    font-family: 'Roboto';
 }
 
+@import "mixins.scss";
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+/* Variables */
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
 .container {
-	max-width: 1170px;
+	max-width: $mw + px;
 	margin: 0 auto;
-    width: 100%;
-}
-@media (max-width: 1182px) {
-	.container {
+	width: 100%;
+	@media (max-width: $md1+px) {
 		max-width: 970px;
 	}
-}
-@media (max-width: 991.98px) {
-	.container {
+	@media (max-width: $md2+px) {
 		max-width: 750px;
 	}
-}
-@media (max-width: 767.98px) {
-	.container {
+	@media (max-width: $md3+px) {
 		max-width: none;
 		padding: 0 10px;
 	}
 }
+
+@import 'header.scss'
 
 
