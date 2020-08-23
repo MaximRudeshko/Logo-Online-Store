@@ -6,6 +6,7 @@
     font-family:"Trebuchet";
     user-select: none;
     font-family: 'Roboto';
+    transition:all .2s ease;
 }
 
 @import "mixins.scss";
@@ -17,7 +18,7 @@
 
 /* Variables */
 $minwidth: 320px;
-$mw: 1170;
+$mw: 1140;
 $md1: $mw + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -31,7 +32,8 @@ $md4: 479.98;
 		max-width: 970px;
 	}
 	@media (max-width: $md2+px) {
-		max-width: 750px;
+        max-width: 770px;
+        
 	}
 	@media (max-width: $md3+px) {
 		max-width: none;

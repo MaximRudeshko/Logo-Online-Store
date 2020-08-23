@@ -34,7 +34,7 @@ gulp.task("copy-assets", () => {
 });
 
  gulp.task("build-js", () => {
-  return gulp.src("./src/js/script.js")
+  return gulp.src("./src/js/*.js")
               .pipe(webpack({
                   mode: 'development',
                   output: {
