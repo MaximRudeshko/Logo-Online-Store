@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/burger.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2442,6 +2442,45 @@ __webpack_require__.r(__webpack_exports__);
   function customAdapt() {//const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   }
 })();
+
+/***/ }),
+
+/***/ "./src/js/menu.js":
+/*!************************!*\
+  !*** ./src/js/menu.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var menu = document.querySelector('.page-menu__list'),
+    burger = document.querySelector('.page-menu__burger'),
+    header = document.querySelector('.page-menu__header'),
+    parentBlock = document.querySelector('.page-menu'),
+    originalHeight = parentBlock.style.height;
+heightBefore = window.getComputedStyle(header).height;
+console.log(originalHeight);
+burger.addEventListener('click', function () {
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+    parentBlock.style.height = originalHeight;
+  } else {
+    menu.classList.add('active');
+    parentBlock.style.height = heightBefore;
+  }
+});
+
+/***/ }),
+
+/***/ 0:
+/*!*************************************************!*\
+  !*** multi ./src/js/burger.js ./src/js/menu.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\burger.js */"./src/js/burger.js");
+module.exports = __webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\menu.js */"./src/js/menu.js");
+
 
 /***/ })
 

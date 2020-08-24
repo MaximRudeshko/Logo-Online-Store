@@ -39,7 +39,8 @@
           letter-spacing: 0.6px; }
       @media (max-width: 767.98px) {
         .top-header__column:nth-child(2) {
-          padding: 0; } }
+          padding: 0;
+          flex: 0 0 150px; } }
     .top-header__column:nth-child(3) {
       justify-content: flex-end; }
 
