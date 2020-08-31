@@ -95,34 +95,36 @@
         <div class="page__container container">
             <aside class="page__side">
                 <nav class="page__menu page-menu">
-                    <div class="page-menu__header">
-                        <div class="page-menu__title">
-                            <h2>Каталог товаров</h2>
+                    <div class="page-menu__content">
+                        <div class="page-menu__header">
+                            <div class="page-menu__title">
+                                <h2>Каталог товаров</h2>
+                            </div>
+                            <div class="page-menu__burger burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                            </div>
                         </div>
-                        <div class="page-menu__burger burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                        <div class="page-menu__body">
+                            <ul class="page-menu__list">
+                                <li><a href="#" class="page-menu__link page-menu__link_arrow">Беговые дорожки</a></li>
+                                <li><a href="#" class="page-menu__link">Эллиптические тренажеры</a></li>
+                                <li><a href="#" class="page-menu__link">Велотренажеры</a></li>
+                                <li><a href="#" class="page-menu__link">Гребные тренажеры</a></li>
+                                <li><a href="#" class="page-menu__link">Вибромассажеры</a></li>
+                                <li><a href="#" class="page-menu__link">Теннисные столы </a></li>
+                                <li><a href="#" class="page-menu__link">Баскетбол</a></li>
+                                <li><a href="#" class="page-menu__link page-menu__link_arrow">Массажные кресла</a></li>
+                                <li><a href="#" class="page-menu__link">Массажные столы </a></li>
+                                <li><a href="#" class="page-menu__link page-menu__link_arrow">Силовые тренажеры</a></li>
+                                <li><a href="#" class="page-menu__link">Батуты</a></li>
+                                <li><a href="#" class="page-menu__link">Детские городки</a></li>
+                                <li><a href="#" class="page-menu__link">Дачная мебель</a></li>
+                                <li><a href="#" class="page-menu__link">Уличные спортивные комплексы</a></li>
+                                <li><a href="#" class="page-menu__link">Аксессуары</a></li>
+                            </ul> 
                         </div>
-                    </div>
-                    <div class="page-menu__body">
-                        <ul class="page-menu__list">
-                            <li><a href="#" class="page-menu__link page-menu__link_arrow">Беговые дорожки</a></li>
-                            <li><a href="#" class="page-menu__link">Эллиптические тренажеры</a></li>
-                            <li><a href="#" class="page-menu__link">Велотренажеры</a></li>
-                            <li><a href="#" class="page-menu__link">Гребные тренажеры</a></li>
-                            <li><a href="#" class="page-menu__link">Вибромассажеры</a></li>
-                            <li><a href="#" class="page-menu__link">Теннисные столы </a></li>
-                            <li><a href="#" class="page-menu__link">Баскетбол</a></li>
-                            <li><a href="#" class="page-menu__link page-menu__link_arrow">Массажные кресла</a></li>
-                            <li><a href="#" class="page-menu__link">Массажные столы </a></li>
-                            <li><a href="#" class="page-menu__link page-menu__link_arrow">Силовые тренажеры</a></li>
-                            <li><a href="#" class="page-menu__link">Батуты</a></li>
-                            <li><a href="#" class="page-menu__link">Детские городки</a></li>
-                            <li><a href="#" class="page-menu__link">Дачная мебель</a></li>
-                            <li><a href="#" class="page-menu__link">Уличные спортивные комплексы</li>
-                            <li><a href="#" class="page-menu__link">Аксессуары</a></li>
-                        </ul> 
                     </div>
                     <div class="page-menu__submenu submenu-page">
                         <div class="submenu-page__item">
@@ -155,12 +157,124 @@
                             </div>
                         </div>
                     </div>
-
-
                 </nav>
             </aside>
             <div class="page__content">
-
+                <form class="page__search search-page">
+                    <div class="search-page__select">
+                        <div class="search-page__title"><span>Везде</span></div>
+                        <div class="search-page__categories categories-search">
+                            <div class="categories-search__row">
+                                <div class="categories-search__column">
+                                    <ul class="categories-search__list">
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" >
+                                                <span class="checkbox__text"><span>Беговые дорожки</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Эллиптические тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Велотренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Гребные тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Вибромассажеры</span></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="categories-search__column">
+                                    <ul class="categories-search__list">
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" >
+                                                <span class="checkbox__text"><span>Беговые дорожки</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Эллиптические тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Велотренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Гребные тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Вибромассажеры</span></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="categories-search__column">
+                                    <ul class="categories-search__list">
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" >
+                                                <span class="checkbox__text"><span>Беговые дорожки</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Эллиптические тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Велотренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Гребные тренажеры</span></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="categories-search__checkbox checkbox">
+                                                <input type="checkbox" class="checkbox__input" id="check">
+                                                <span class="checkbox__text"><span>Вибромассажеры</span></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                 
+                    </div>
+                    <input type="text" class="search-page__input">
+                    <button class="search-page__button btn">Найти</button>
+                    
+                </form>
+                
             </div>
         </div>
     </main>

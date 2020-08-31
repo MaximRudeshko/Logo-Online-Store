@@ -2726,9 +2726,10 @@ window.addEventListener('DOMContentLoaded', function () {
       header = document.querySelector('.page-menu__header'),
       parentBlock = document.querySelector('.page-menu'),
       originalHeight = parentBlock.style.height,
-      heightBefore = window.getComputedStyle(header).height;
-  var links = document.querySelectorAll('.page-menu__link_arrow'),
-      submenuItems = document.querySelector('.submenu-page');
+      heightBefore = window.getComputedStyle(header).height,
+      links = document.querySelectorAll('.page-menu__link_arrow'),
+      submenuItems = document.querySelector('.submenu-page'); //Выпадающее сабменю для ссылок в сайдбаре
+
   links.forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
@@ -2739,7 +2740,8 @@ window.addEventListener('DOMContentLoaded', function () {
         submenuItems.classList.add('active');
       }
     });
-  });
+  }); //Открытие/закрытие сайдбара
+
   burger.addEventListener('click', function () {
     if (menu.classList.contains('active')) {
       menu.classList.remove('active');
@@ -2754,15 +2756,67 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/search-panel.js":
+/*!********************************!*\
+  !*** ./src/js/search-panel.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  var searchBtn = document.querySelector('.search-page__title'),
+      searchMenu = document.querySelector('.categories-search__row'),
+      searchBtnInner = document.querySelector('.search-page__title span'),
+      checkboxItems = document.querySelectorAll('.checkbox__input'),
+      searchValue = document.querySelector('.search-page__value');
+  var quantity = 0; //Открытие/закрытие выпадающих категорий в поиске
+
+  searchBtn.addEventListener('click', function () {
+    if (searchMenu.classList.contains('active')) {
+      searchMenu.classList.remove('active');
+      searchBtnInner.classList.remove('active');
+      searchBtnInner.textContent = 'Везде';
+    } else {
+      searchMenu.classList.add('active');
+      searchBtnInner.classList.add('active');
+    }
+  }); //Отоборажение количества выделенных элементов
+
+  checkboxItems.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      checkbox.classList.toggle('active');
+      quantity = document.querySelectorAll('.checkbox__input.active').length;
+
+      if (quantity > 0) {
+        searchBtnInner.textContent = "\u0412\u044B\u0431\u0440\u0430\u043D\u043E: ".concat(quantity);
+      } else {
+        quantity = 0;
+        searchBtnInner.textContent = "\u0412\u0435\u0437\u0434\u0435";
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************!*\
-  !*** multi ./src/js/burger.js ./src/js/menu.js ***!
-  \*************************************************/
+/*!**************************************************************************!*\
+  !*** multi ./src/js/burger.js ./src/js/menu.js ./src/js/search-panel.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\burger.js */"./src/js/burger.js");
-module.exports = __webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\menu.js */"./src/js/menu.js");
+__webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\menu.js */"./src/js/menu.js");
+module.exports = __webpack_require__(/*! C:\Users\alesy\Desktop\OpenServer\domains\Logo-Online-Store\src\js\search-panel.js */"./src/js/search-panel.js");
 
 
 /***/ })

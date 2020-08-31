@@ -4,10 +4,11 @@ window.addEventListener('DOMContentLoaded', () => {
     header = document.querySelector('.page-menu__header'),
     parentBlock = document.querySelector('.page-menu'),
     originalHeight = parentBlock.style.height,
-    heightBefore = window.getComputedStyle(header).height;
+    heightBefore = window.getComputedStyle(header).height,
+    links = document.querySelectorAll('.page-menu__link_arrow'),
+    submenuItems = document.querySelector('.submenu-page');
 
-const links = document.querySelectorAll('.page-menu__link_arrow'),
-      submenuItems = document.querySelector('.submenu-page');
+//Выпадающее сабменю для ссылок в сайдбаре
 
 links.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -20,9 +21,9 @@ links.forEach(link => {
             
         }
     })
-
-    
 })
+
+//Открытие/закрытие сайдбара
 
     burger.addEventListener('click', () => {
         if(menu.classList.contains('active')){
@@ -35,6 +36,11 @@ links.forEach(link => {
             parentBlock.style.height = heightBefore;
             submenuItems.classList.remove('active')
         }
-    })
+    });
+
+
+
 })
+
+
 

@@ -4,7 +4,6 @@ const gulp = require("gulp");
 const sass = require('gulp-sass');
 const browsersync = require("browser-sync");
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const webpack = require("webpack-stream");
 
 
